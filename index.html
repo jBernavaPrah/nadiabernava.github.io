@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
@@ -26,157 +27,191 @@
     html { scroll-behavior: smooth; }
     body { background: #ffffff; color: var(--ink); font-family: 'Jost', sans-serif; font-weight: 300; overflow-x: hidden; }
 
-    /* NAV */
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; padding: 1.4rem 3rem; display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.95); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(91,168,165,0.12); }
-    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; font-weight: 400; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
-    .nav-links { display: flex; gap: 2rem; align-items: center; }
-    .nav-link { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.3s; }
-    .nav-link:hover { color: var(--aqua); }
-    .nav-cta { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--aqua); text-decoration: none; border-bottom: 1px solid var(--aqua); padding-bottom: 2px; transition: color 0.3s, border-color 0.3s; }
-    .nav-cta:hover { color: var(--lilac); border-color: var(--lilac); }
-    .nav-lang { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--soft); text-decoration: none; border-bottom: 1px solid var(--soft); padding-bottom: 2px; transition: color 0.3s, border-color 0.3s; }
-    .nav-lang:hover { color: var(--lilac); border-color: var(--lilac); }
+```
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; padding: 1.4rem 3rem; display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.95); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(91,168,165,0.12); }
+.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; font-weight: 400; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
+.nav-links { display: flex; gap: 2rem; align-items: center; }
+.nav-link { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.3s; }
+.nav-link:hover { color: var(--aqua); }
+.nav-cta { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--aqua); text-decoration: none; border-bottom: 1px solid var(--aqua); padding-bottom: 2px; transition: color 0.3s, border-color 0.3s; }
+.nav-cta:hover { color: var(--lilac); border-color: var(--lilac); }
+.nav-lang { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--soft); text-decoration: none; border-bottom: 1px solid var(--soft); padding-bottom: 2px; transition: color 0.3s, border-color 0.3s; }
+.nav-lang:hover { color: var(--lilac); border-color: var(--lilac); }
 
-    /* HERO */
-    .hero { min-height: 100vh; display: grid; grid-template-columns: 1.15fr 0.85fr; overflow: hidden; }
-    .hero-left { display: flex; flex-direction: column; justify-content: center; padding: 9rem 4rem 6rem 6rem; background: #ffffff; position: relative; z-index: 2; }
-    .hero-eyebrow { font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--aqua); margin-bottom: 2rem; }
-    .hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.5rem, 5.5vw, 6.2rem); font-weight: 300; line-height: 1.04; color: var(--ink); margin-bottom: 2rem; }
-    .hero-title em { font-style: italic; color: var(--lilac); }
-    .hero-sub { font-size: 1rem; line-height: 1.9; color: var(--muted); max-width: 420px; margin-bottom: 1rem; }
-    .hero-promise { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.15rem; color: var(--aqua); margin-bottom: 2.8rem; max-width: 380px; line-height: 1.6; }
-    .hero-btn { display: inline-block; padding: 1rem 2.8rem; background: var(--ink); color: #fff; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; transition: background 0.35s, transform 0.3s; width: fit-content; }
-    .hero-btn:hover { background: var(--aqua); transform: translateY(-2px); }
-    .hero-right { position: relative; overflow: hidden; }
-    .hero-bg { position: absolute; inset: 0; background: linear-gradient(150deg, var(--aqua-pale) 0%, #e8e2f5 55%, var(--lilac-pale) 100%); }
-    .orb-1 { position: absolute; width: 72%; aspect-ratio: 1; border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%,-50%); background: radial-gradient(circle at 38% 38%, rgba(91,168,165,0.28) 0%, rgba(142,114,181,0.18) 55%, transparent 75%); border: 1px solid rgba(91,168,165,0.2); animation: breathe 7s ease-in-out infinite; }
-    .orb-2 { position: absolute; width: 44%; aspect-ratio: 1; border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%,-50%); background: radial-gradient(circle, rgba(142,114,181,0.15), transparent 70%); border: 1px solid rgba(142,114,181,0.15); animation: breathe 7s ease-in-out 1.5s infinite; }
-    .orb-3 { position: absolute; width: 22%; aspect-ratio: 1; border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%,-50%); background: rgba(91,168,165,0.12); animation: breathe 7s ease-in-out 3s infinite; }
-    .hero-word { position: absolute; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1rem; letter-spacing: 0.1em; font-weight: 400; }
-    .hw-1 { top: 18%; left: 30%; color: var(--lilac); }
-    .hw-2 { top: 22%; left: 52%; color: var(--aqua); }
-    .hw-3 { top: 36%; left: 28%; color: var(--aqua); }
-    .hw-4 { top: 36%; left: 62%; color: var(--lilac); }
-    .hw-5 { top: 58%; left: 28%; color: var(--lilac); }
-    .hw-6 { top: 58%; left: 60%; color: var(--aqua); }
-    .hw-7 { top: 74%; left: 32%; color: var(--aqua); }
-    .hw-8 { top: 74%; left: 52%; color: var(--lilac); }
-    .hero-divider { position: absolute; left: 0; top: 0; bottom: 0; width: 1px; background: linear-gradient(to bottom, transparent, var(--aqua-light), transparent); }
-    .scroll-hint { position: absolute; bottom: 2.5rem; left: 6rem; display: flex; align-items: center; gap: 0.75rem; }
-    .scroll-line { width: 36px; height: 1px; background: var(--aqua-light); overflow: hidden; position: relative; }
-    .scroll-line::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: var(--aqua); animation: slideLine 2.2s 1.5s ease-in-out infinite; }
-    .scroll-text { font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--soft); }
+/* HERO */
+.hero { min-height: 100vh; display: grid; grid-template-columns: 1.15fr 0.85fr; overflow: hidden; }
+.hero-left { display: flex; flex-direction: column; justify-content: center; padding: 9rem 4rem 6rem 6rem; background: #ffffff; position: relative; z-index: 2; }
+.hero-eyebrow { font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--aqua); margin-bottom: 2rem; }
+.hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.5rem, 5.5vw, 6.2rem); font-weight: 300; line-height: 1.04; color: var(--ink); margin-bottom: 2rem; }
+.hero-title em { font-style: italic; color: var(--lilac); }
+.hero-sub { font-size: 1rem; line-height: 1.9; color: var(--muted); max-width: 420px; margin-bottom: 1rem; }
+.hero-promise { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.15rem; color: var(--aqua); margin-bottom: 2.8rem; max-width: 380px; line-height: 1.6; }
+.hero-btn { display: inline-block; padding: 1rem 2.8rem; background: var(--ink); color: #fff; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; transition: background 0.35s, transform 0.3s; width: fit-content; }
+.hero-btn:hover { background: var(--aqua); transform: translateY(-2px); }
+.hero-right { position: relative; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background: linear-gradient(150deg, var(--aqua-pale) 0%, #e8e2f5 55%, var(--lilac-pale) 100%); }
+.orb-1 { position: absolute; width: 72%; aspect-ratio: 1; border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%,-50%); background: radial-gradient(circle at 38% 38%, rgba(91,168,165,0.28) 0%, rgba(142,114,181,0.18) 55%, transparent 75%); border: 1px solid rgba(91,168,165,0.2); animation: breathe 7s ease-in-out infinite; }
+.orb-2 { position: absolute; width: 44%; aspect-ratio: 1; border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%,-50%); background: radial-gradient(circle, rgba(142,114,181,0.15), transparent 70%); border: 1px solid rgba(142,114,181,0.15); animation: breathe 7s ease-in-out 1.5s infinite; }
+.orb-3 { position: absolute; width: 22%; aspect-ratio: 1; border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%,-50%); background: rgba(91,168,165,0.12); animation: breathe 7s ease-in-out 3s infinite; }
+.hero-word { position: absolute; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1rem; letter-spacing: 0.1em; font-weight: 400; }
+.hw-1 { top: 18%; left: 30%; color: var(--lilac); }
+.hw-2 { top: 22%; left: 52%; color: var(--aqua); }
+.hw-3 { top: 36%; left: 28%; color: var(--aqua); }
+.hw-4 { top: 36%; left: 62%; color: var(--lilac); }
+.hw-5 { top: 58%; left: 28%; color: var(--lilac); }
+.hw-6 { top: 58%; left: 60%; color: var(--aqua); }
+.hw-7 { top: 74%; left: 32%; color: var(--aqua); }
+.hw-8 { top: 74%; left: 52%; color: var(--lilac); }
+.hero-divider { position: absolute; left: 0; top: 0; bottom: 0; width: 1px; background: linear-gradient(to bottom, transparent, var(--aqua-light), transparent); }
+.scroll-hint { position: absolute; bottom: 2.5rem; left: 6rem; display: flex; align-items: center; gap: 0.75rem; }
+.scroll-line { width: 36px; height: 1px; background: var(--aqua-light); overflow: hidden; position: relative; }
+.scroll-line::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: var(--aqua); animation: slideLine 2.2s 1.5s ease-in-out infinite; }
+.scroll-text { font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--soft); }
 
-    /* INTRO */
-    .intro { padding: 7rem 6rem; display: grid; grid-template-columns: 1fr 2.2fr; gap: 5rem; align-items: start; background: #ffffff; }
-    .intro-label { font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--aqua); padding-top: 0.6rem; }
-    .intro-text { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 2.4vw, 2.3rem); font-weight: 300; line-height: 1.55; color: var(--ink); }
-    .intro-text em { font-style: italic; color: var(--lilac); }
-    .intro-text strong { font-weight: 400; color: var(--aqua); }
+/* INTRO */
+.intro { padding: 7rem 6rem; display: grid; grid-template-columns: 1fr 2.2fr; gap: 5rem; align-items: start; background: #ffffff; }
+.intro-label { font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--aqua); padding-top: 0.6rem; }
+.intro-text { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 2.4vw, 2.3rem); font-weight: 300; line-height: 1.55; color: var(--ink); }
+.intro-text em { font-style: italic; color: var(--lilac); }
+.intro-text strong { font-weight: 400; color: var(--aqua); }
 
-    /* METHOD */
-    .method { padding: 7rem 6rem; background: var(--lilac-section); }
-    .method-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(26,26,46,0.1); }
-    .method-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 4vw, 4rem); font-weight: 300; color: var(--ink); }
-    .method-sub { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--aqua); }
-    .method-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; }
-    .step { padding-top: 2rem; border-top: 1px solid rgba(26,26,46,0.1); }
-    .step-num { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; color: rgba(91,168,165,0.35); line-height: 1; margin-bottom: 1.5rem; }
-    .step-name { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; margin-bottom: 1rem; color: var(--ink); }
-    .step-desc { font-size: 0.88rem; line-height: 1.85; color: var(--muted); }
-    .step-accent { color: var(--aqua); }
-    .step-accent-l { color: var(--lilac); }
+/* METHOD */
+.method { padding: 7rem 6rem; background: var(--lilac-section); }
+.method-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(26,26,46,0.1); }
+.method-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 4vw, 4rem); font-weight: 300; color: var(--ink); }
+.method-sub { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--aqua); }
+.method-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; }
+.step { padding-top: 2rem; border-top: 1px solid rgba(26,26,46,0.1); }
+.step-num { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; color: rgba(91,168,165,0.35); line-height: 1; margin-bottom: 1.5rem; }
+.step-name { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; margin-bottom: 1rem; color: var(--ink); }
+.step-desc { font-size: 0.88rem; line-height: 1.85; color: var(--muted); }
+.step-accent { color: var(--aqua); }
+.step-accent-l { color: var(--lilac); }
 
-    /* RESULTS */
-    .results { padding: 8rem 6rem; background: #ffffff; }
-    .results-header { text-align: center; margin-bottom: 5rem; }
-    .results-eyebrow { font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--lilac); margin-bottom: 1.5rem; }
-    .results-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 4vw, 3.8rem); font-weight: 300; line-height: 1.15; color: var(--ink); }
-    .results-title em { font-style: italic; color: var(--aqua); }
-    .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-    .result-card { padding: 2.5rem 2rem; background: #fafafa; border: 1px solid rgba(91,168,165,0.1); border-top: 2px solid transparent; transition: border-top-color 0.35s, transform 0.35s, box-shadow 0.35s; }
-    .result-card:hover { transform: translateY(-4px); }
-    .result-card:nth-child(odd):hover { border-top-color: var(--aqua); box-shadow: 0 12px 40px rgba(91,168,165,0.1); }
-    .result-card:nth-child(even):hover { border-top-color: var(--lilac); box-shadow: 0 12px 40px rgba(142,114,181,0.1); }
-    .result-icon { font-size: 1.6rem; margin-bottom: 1.2rem; }
-    .result-title { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 400; color: var(--ink); margin-bottom: 0.8rem; }
-    .result-text { font-size: 0.85rem; line-height: 1.8; color: var(--muted); }
+/* RESULTS */
+.results { padding: 8rem 6rem; background: #ffffff; }
+.results-header { text-align: center; margin-bottom: 5rem; }
+.results-eyebrow { font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--lilac); margin-bottom: 1.5rem; }
+.results-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 4vw, 3.8rem); font-weight: 300; line-height: 1.15; color: var(--ink); }
+.results-title em { font-style: italic; color: var(--aqua); }
+.results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.result-card { padding: 2.5rem 2rem; background: #fafafa; border: 1px solid rgba(91,168,165,0.1); border-top: 2px solid transparent; transition: border-top-color 0.35s, transform 0.35s, box-shadow 0.35s; }
+.result-card:hover { transform: translateY(-4px); }
+.result-card:nth-child(odd):hover { border-top-color: var(--aqua); box-shadow: 0 12px 40px rgba(91,168,165,0.1); }
+.result-card:nth-child(even):hover { border-top-color: var(--lilac); box-shadow: 0 12px 40px rgba(142,114,181,0.1); }
+.result-icon { font-size: 1.6rem; margin-bottom: 1.2rem; }
+.result-title { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 400; color: var(--ink); margin-bottom: 0.8rem; }
+.result-text { font-size: 0.85rem; line-height: 1.8; color: var(--muted); }
 
-    /* PRICING */
-    .session { padding: 7rem 6rem; background: var(--lilac-pale); }
-    .session-header { text-align: center; margin-bottom: 5rem; }
-    .session-eyebrow { font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--aqua); margin-bottom: 1.5rem; }
-    .session-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 3.8vw, 3.5rem); font-weight: 300; color: var(--ink); margin-bottom: 1rem; }
-    .session-subtitle { font-size: 0.9rem; color: var(--muted); max-width: 480px; margin: 0 auto; line-height: 1.8; }
-    .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; max-width: 860px; margin: 0 auto 3.5rem; }
-    .pricing-card { padding: 3.5rem 3rem; background: white; position: relative; transition: transform 0.3s; }
-    .pricing-card:hover { transform: translateY(-4px); }
-    .pricing-card.featured { background: white; border: 1px solid var(--lilac-light); }
-    .pricing-badge { position: absolute; top: 1.5rem; right: 1.5rem; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; background: var(--aqua); color: white; padding: 0.3rem 0.8rem; }
-    .pricing-label { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--aqua); margin-bottom: 1rem; }
-    .pricing-name { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; margin-bottom: 0.5rem; color: var(--ink); }
-    .pricing-price { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; color: var(--aqua); line-height: 1; margin-bottom: 0.5rem; }
-    .pricing-card.featured .pricing-price { color: var(--lilac); }
-    .pricing-price-note { font-size: 0.78rem; color: var(--soft); margin-bottom: 2rem; }
-    .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; }
-    .pricing-features li { font-size: 0.88rem; color: var(--muted); display: flex; align-items: flex-start; gap: 0.8rem; line-height: 1.6; }
-    .pricing-features li::before { content: '–'; color: var(--aqua-mid); flex-shrink: 0; }
-    .session-note { text-align: center; font-size: 0.85rem; color: var(--soft); max-width: 520px; margin: 0 auto; line-height: 1.8; font-style: italic; }
+/* PRICING */
+.session { padding: 7rem 6rem; background: var(--lilac-pale); }
+.session-header { text-align: center; margin-bottom: 5rem; }
+.session-eyebrow { font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--aqua); margin-bottom: 1.5rem; }
+.session-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 3.8vw, 3.5rem); font-weight: 300; color: var(--ink); margin-bottom: 1rem; }
+.session-subtitle { font-size: 0.9rem; color: var(--muted); max-width: 480px; margin: 0 auto; line-height: 1.8; }
+.pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; max-width: 860px; margin: 0 auto 3.5rem; }
+.pricing-card { padding: 3.5rem 3rem; background: white; position: relative; transition: transform 0.3s; }
+.pricing-card:hover { transform: translateY(-4px); }
+.pricing-card.featured { background: white; border: 1px solid var(--lilac-light); }
+.pricing-badge { position: absolute; top: 1.5rem; right: 1.5rem; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; background: var(--aqua); color: white; padding: 0.3rem 0.8rem; }
+.pricing-label { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--aqua); margin-bottom: 1rem; }
+.pricing-name { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; margin-bottom: 0.5rem; color: var(--ink); }
+.pricing-price { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; color: var(--aqua); line-height: 1; margin-bottom: 0.5rem; }
+.pricing-card.featured .pricing-price { color: var(--lilac); }
+.pricing-price-note { font-size: 0.78rem; color: var(--soft); margin-bottom: 2rem; }
+.pricing-features { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; }
+.pricing-features li { font-size: 0.88rem; color: var(--muted); display: flex; align-items: flex-start; gap: 0.8rem; line-height: 1.6; }
+.pricing-features li::before { content: '–'; color: var(--aqua-mid); flex-shrink: 0; }
+.session-note { text-align: center; font-size: 0.85rem; color: var(--soft); max-width: 520px; margin: 0 auto; line-height: 1.8; font-style: italic; }
 
-    /* ABOUT */
-    .about { padding: 8rem 6rem; background: var(--lilac-section); display: grid; grid-template-columns: 2fr 1fr; gap: 7rem; align-items: start; }
-    .about-eyebrow { font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--lilac); margin-bottom: 2rem; }
-    .about-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 3.8vw, 3.5rem); font-weight: 300; line-height: 1.15; margin-bottom: 2.5rem; color: var(--ink); }
-    .about-body { font-size: 0.93rem; line-height: 1.95; color: var(--muted); margin-bottom: 1.4rem; }
-    .about-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 2rem; }
-    .tag { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.45rem 1rem; border: 1px solid rgba(91,168,165,0.3); color: var(--muted); transition: border-color 0.3s, color 0.3s; }
-    .tag:hover { border-color: var(--aqua); color: var(--aqua); }
-    .about-sidebar { padding-top: 3rem; }
-    .about-pull { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-style: italic; font-weight: 300; line-height: 1.65; color: var(--ink); padding-left: 1.5rem; border-left: 2px solid var(--lilac-light); }
+/* ABOUT */
+.about { padding: 8rem 6rem; background: var(--lilac-section); display: grid; grid-template-columns: 2fr 1fr; gap: 7rem; align-items: start; }
+.about-eyebrow { font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--lilac); margin-bottom: 2rem; }
+.about-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 3.8vw, 3.5rem); font-weight: 300; line-height: 1.15; margin-bottom: 2.5rem; color: var(--ink); }
+.about-body { font-size: 0.93rem; line-height: 1.95; color: var(--muted); margin-bottom: 1.4rem; }
+.about-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 2rem; }
+.tag { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.45rem 1rem; border: 1px solid rgba(91,168,165,0.3); color: var(--muted); transition: border-color 0.3s, color 0.3s; }
+.tag:hover { border-color: var(--aqua); color: var(--aqua); }
+.about-sidebar { padding-top: 3rem; }
+.about-pull { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-style: italic; font-weight: 300; line-height: 1.65; color: var(--ink); padding-left: 1.5rem; border-left: 2px solid var(--lilac-light); }
 
-    /* BOOKING */
-    .booking { padding: 9rem 6rem; background: var(--lilac-pale); text-align: center; position: relative; overflow: hidden; }
-    .booking::before { content: ''; position: absolute; width: 700px; height: 700px; border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%,-50%); background: radial-gradient(circle, rgba(91,168,165,0.07), rgba(142,114,181,0.05) 50%, transparent 70%); }
-    .booking-eyebrow { font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--aqua); margin-bottom: 2rem; }
-    .booking-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 5vw, 5.2rem); font-weight: 300; color: var(--ink); line-height: 1.08; margin-bottom: 1.8rem; position: relative; }
-    .booking-title em { font-style: italic; color: var(--aqua); }
-    .booking-sub { font-size: 0.93rem; color: var(--muted); margin-bottom: 3.5rem; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.85; position: relative; }
-    .booking-actions { display: flex; flex-direction: column; align-items: center; gap: 1.2rem; position: relative; }
-    .booking-btn { display: inline-block; padding: 1.15rem 3.5rem; background: #3d8a87; color: white; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; transition: background 0.35s, transform 0.3s; }
-    .booking-btn:hover { background: #2d6e6b; transform: translateY(-3px); }
-    .booking-contact { font-size: 0.8rem; color: var(--soft); }
-    .booking-contact a { color: var(--aqua); text-decoration: none; }
+/* BOOKING */
+.booking { padding: 9rem 6rem; background: var(--lilac-pale); text-align: center; position: relative; overflow: hidden; }
+.booking::before { content: ''; position: absolute; width: 700px; height: 700px; border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%,-50%); background: radial-gradient(circle, rgba(91,168,165,0.07), rgba(142,114,181,0.05) 50%, transparent 70%); }
+.booking-eyebrow { font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--aqua); margin-bottom: 2rem; }
+.booking-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 5vw, 5.2rem); font-weight: 300; color: var(--ink); line-height: 1.08; margin-bottom: 1.8rem; position: relative; }
+.booking-title em { font-style: italic; color: var(--aqua); }
+.booking-sub { font-size: 0.93rem; color: var(--muted); margin-bottom: 3.5rem; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.85; position: relative; }
+.booking-actions { display: flex; flex-direction: column; align-items: center; gap: 1.2rem; position: relative; }
+.booking-btn { display: inline-block; padding: 1.15rem 3.5rem; background: #3d8a87; color: white; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; transition: background 0.35s, transform 0.3s; }
+.booking-btn:hover { background: #2d6e6b; transform: translateY(-3px); }
+.booking-contact { font-size: 0.8rem; color: var(--soft); }
+.booking-contact a { color: var(--aqua); text-decoration: none; }
 
-    footer { padding: 2.2rem 6rem; background: var(--lilac-section); display: flex; justify-content: space-between; align-items: center; }
-    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
-    .footer-note { font-size: 0.68rem; color: var(--soft); }
+footer { padding: 2.2rem 6rem; background: var(--lilac-section); display: flex; justify-content: space-between; align-items: center; }
+.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.footer-note { font-size: 0.68rem; color: var(--soft); }
 
-    @keyframes breathe { 0%,100% { transform: translate(-50%,-50%) scale(1); opacity: 0.85; } 50% { transform: translate(-50%,-50%) scale(1.07); opacity: 1; } }
-    @keyframes slideLine { 0% { left: -100%; } 60% { left: 100%; } 100% { left: 100%; } }
 
-    @media (max-width: 900px) {
-      nav { padding: 1.2rem 1.5rem; }
-      .nav-links { gap: 1.2rem; }
-      .nav-link { display: none; }
-      .hero { grid-template-columns: 1fr; min-height: auto; }
-      .hero-left { padding: 6rem 1.5rem 3rem; min-height: 100vh; }
-      .hero-right { height: 320px; }
-      .scroll-hint { left: 1.5rem; bottom: 1.5rem; }
-      .intro { grid-template-columns: 1fr; gap: 1.5rem; padding: 4rem 1.5rem; }
-      .method { padding: 4rem 1.5rem; }
-      .method-steps { grid-template-columns: 1fr; gap: 2rem; }
-      .method-header { flex-direction: column; gap: 0.5rem; }
-      .results { padding: 4rem 1.5rem; }
-      .results-grid { grid-template-columns: 1fr; }
-      .session { padding: 4rem 1.5rem; }
-      .pricing-grid { grid-template-columns: 1fr; max-width: 100%; }
-      .about { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 1.5rem; }
-      .booking { padding: 5rem 1.5rem; }
-      footer { flex-direction: column; gap: 0.8rem; padding: 2rem 1.5rem; text-align: center; }
-    }
+/* MODAL */
+.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(26,26,46,0.5); z-index: 200; align-items: center; justify-content: center; backdrop-filter: blur(4px); }
+.modal-overlay.open { display: flex; }
+.modal { background: white; padding: 3rem; max-width: 480px; width: 90%; position: relative; }
+.modal-close { position: absolute; top: 1.2rem; right: 1.5rem; font-size: 1.4rem; cursor: pointer; color: var(--soft); background: none; border: none; line-height: 1; }
+.modal-close:hover { color: var(--ink); }
+.modal-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: var(--ink); margin-bottom: 0.5rem; }
+.modal-sub { font-size: 0.85rem; color: var(--soft); margin-bottom: 2rem; line-height: 1.6; }
+.modal-form { display: flex; flex-direction: column; gap: 1rem; }
+.modal-input { padding: 0.9rem 1.1rem; border: 1px solid rgba(91,168,165,0.3); background: #fafafa; font-family: 'Jost', sans-serif; font-size: 0.9rem; color: var(--ink); outline: none; transition: border-color 0.3s; width: 100%; }
+.modal-input:focus { border-color: var(--aqua); background: white; }
+.modal-btn { padding: 1rem; background: #3d8a87; color: white; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; border: none; cursor: pointer; transition: background 0.3s; }
+.modal-btn:hover { background: #2d6e6b; }
+
+@keyframes breathe { 0%,100% { transform: translate(-50%,-50%) scale(1); opacity: 0.85; } 50% { transform: translate(-50%,-50%) scale(1.07); opacity: 1; } }
+@keyframes slideLine { 0% { left: -100%; } 60% { left: 100%; } 100% { left: 100%; } }
+
+@media (max-width: 900px) {
+  nav { padding: 1.2rem 1.5rem; }
+  .nav-links { gap: 1.2rem; }
+  .nav-link { display: none; }
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-left { padding: 6rem 1.5rem 3rem; min-height: 100vh; }
+  .hero-right { height: 320px; }
+  .scroll-hint { left: 1.5rem; bottom: 1.5rem; }
+  .intro { grid-template-columns: 1fr; gap: 1.5rem; padding: 4rem 1.5rem; }
+  .method { padding: 4rem 1.5rem; }
+  .method-steps { grid-template-columns: 1fr; gap: 2rem; }
+  .method-header { flex-direction: column; gap: 0.5rem; }
+  .results { padding: 4rem 1.5rem; }
+  .results-grid { grid-template-columns: 1fr; }
+  .session { padding: 4rem 1.5rem; }
+  .pricing-grid { grid-template-columns: 1fr; max-width: 100%; }
+  .about { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 1.5rem; }
+  .booking { padding: 5rem 1.5rem; }
+  footer { flex-direction: column; gap: 0.8rem; padding: 2rem 1.5rem; text-align: center; }
+}
+```
+
   </style>
 </head>
 <body>
+
+<!-- MODAL -->
+
+<div class="modal-overlay" id="contactModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <h3 class="modal-title">Scrivimi</h3>
+    <p class="modal-sub">Raccontami qualcosa — cosa ti porta qui?</p>
+    <form class="modal-form" action="https://formspree.io/f/xwvwnwyq" method="POST">
+      <input class="modal-input" type="text" name="name" placeholder="Il tuo nome" required />
+      <input class="modal-input" type="email" name="email" placeholder="La tua email" required />
+      <textarea class="modal-input" name="message" placeholder="Il tuo messaggio..." rows="4" style="resize:vertical;"></textarea>
+      <button class="modal-btn" type="submit">Invia</button>
+    </form>
+  </div>
+</div>
 
 <nav>
   <a class="nav-logo" href="#">Nadia Bernava</a>
@@ -184,7 +219,7 @@
     <a class="nav-link" href="#metodo">Il metodo</a>
     <a class="nav-link" href="#sessione">Sessioni</a>
     <a class="nav-link" href="#chi-sono">Chi sono</a>
-    <a class="nav-cta" href="#prenota">Prenota</a>
+    <a class="nav-cta" href="#" onclick="openModal();return false;">Prenota</a>
     <a class="nav-lang" href="/en.html">EN</a>
   </div>
 </nav>
@@ -344,15 +379,9 @@
   <h2 class="booking-title">Vuoi sentire<br>cosa c'è <em>davvero</em><br>sotto?</h2>
   <p class="booking-sub">Scrivimi per prenotare una sessione o per capire se questo lavoro è quello che stai cercando. Non serve avere tutto chiaro — basta la curiosità di guardare più in profondità.</p>
   <div class="booking-actions">
-    <a href="mailto:nadia@esempio.com" class="booking-btn">Chiedi info</a>
-    <p class="booking-contact">oppure scrivimi a <a href="mailto:nadia@esempio.com">nadia@esempio.com</a></p>
+    <a href="/cdn-cgi/l/email-protection#89e7e8ede0e8c9ecfaece4f9e0e6a7eae6e4" class="booking-btn">Chiedi info</a>
+    <p class="booking-contact">oppure scrivimi a <a href="/cdn-cgi/l/email-protection#8be5eaefe2eacbeef8eee6fbe2e4a5e8e4e6"><span class="__cf_email__" data-cfemail="cfa1aeaba6ae8faabcaaa2bfa6a0e1aca0a2">[email&#160;protected]</span></a></p>
   </div>
 </section>
 
 <footer>
-  <span class="footer-logo">Nadia Bernava · Ipnosi Somatica</span>
-  <span class="footer-note">© 2025 · Sessioni online e in presenza</span>
-</footer>
-
-</body>
-</html>
