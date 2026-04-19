@@ -381,9 +381,18 @@ footer { padding: 2.2rem 6rem; background: var(--lilac-section); display: flex; 
   <h2 class="booking-title">Do you want to feel<br>what is <em>truly</em><br>beneath?</h2>
   <p class="booking-sub">Write to me to book a session or to understand whether this work is what you are looking for. You do not need to have everything clear — all it takes is the curiosity to look a little deeper.</p>
   <div class="booking-actions">
-    <a href="/cdn-cgi/l/email-protection#f896999c9199b89d8b9d95889197d69b9795" class="booking-btn">Get in touch</a>
-    <p class="booking-contact">or write to me at <a href="/cdn-cgi/l/email-protection#4927282d2028092c3a2c24392026672a2624"><span class="__cf_email__" data-cfemail="cda3aca9a4ac8da8bea8a0bda4a2e3aea2a0">[email&#160;protected]</span></a></p>
+    <a id =contact-link href="#" class="booking-btn">Get in touch</a>
   </div>
 </section>
+
+<script>
+  (() => {
+    const e = ["info", "nadiabernava", "com"];
+    const email = `${e[0]}@${e[1]}.${e[2]}`;
+
+    const link = document.getElementById("contact-link");
+    link.href = `mailto:${email}`;
+  })();
+</script>
 
 <footer>
